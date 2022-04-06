@@ -2,10 +2,12 @@ package com.github.dodobest.usegallery
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.github.dodobest.data.databinding.ActivityMainBinding
+import androidx.activity.viewModels
+import com.github.dodobest.usegallery.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+    private val viewModel : GalleryViewModel by viewModels { GalleryViewModelFactory(this) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -13,5 +15,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.lifecycleOwner = this
+        binding.viewModel = viewModel
     }
 }
