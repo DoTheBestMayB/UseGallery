@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">UseGallery</string>
     <string name="loadButton">갤러리 열기</string>
+    <string name="storage_access_required">"Read external storage is required to load image or video"</string>
+    <string name="ok">OK</string>
+    <string name="storage_permission_not_available">Permission is not available. Requesting storage permission.</string>
 </resources>
